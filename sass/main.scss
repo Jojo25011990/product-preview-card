@@ -74,33 +74,51 @@ body {
 		height: 61.1rem;
 	}
 
-	&__imgbox {
-		width: 30rem;
-		height: 45rem;
+	// solution 1 - my first, more complex way 😂
+	// &__imgbox {
+	// 	width: 30rem;
+	// 	height: 45rem;
 
-		&-desktop {
+	// 	&-desktop {
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		object-fit: cover;
+	// 	}
+
+	// 	&-mobile {
+	// 		display: none;
+	// 	}
+
+	// 	@media (max-width: 450px) {
+	// 		width: 100%;
+	// 		height: 24rem;
+
+	// 		&-desktop {
+	// 			display: none;
+	// 		}
+
+	// 		&-mobile {
+	// 			display: block;
+	// 			width: 100%;
+	// 			object-fit: cover;
+	// 		}
+	// 	}
+	// }
+	// solution 1 - End of my, more complex way 😂
+
+	// Solution 2 - Easier way using <picture> tag, thank you Adriano!
+	&__imgbox {
+		width: 100%;
+		height: auto;
+
+		&-image {
 			width: 100%;
-			height: 100%;
+			height: auto;
 			object-fit: cover;
 		}
 
-		&-mobile {
-			display: none;
-		}
-
 		@media (max-width: 450px) {
-			width: 100%;
 			height: 24rem;
-
-			&-desktop {
-				display: none;
-			}
-
-			&-mobile {
-				display: block;
-				width: 100%;
-				object-fit: cover;
-			}
 		}
 	}
 

@@ -24,21 +24,38 @@
 	</head>
 	<body>
 		<div class="card">
+			<!-- Second solution (easier way 😉) - using <picture> tag, thank you Adriano! -->
 			<div class="card__imgbox">
+				<picture>
+					<source
+						media="(max-width: 450px)"
+						srcset="./images/image-product-mobile.jpg"
+					/>
+					<img
+						src="./images/image-product-desktop.jpg"
+						alt="Gabrielle Essence Eau De Parfum by Chanel - Perfume bottle"
+						class="card__imgbox-desktop"
+						loading="lazy"
+					/>
+				</picture>
+			</div>
+
+			<!-- First solution (more complex way 😂) - using multiple <img> elements -->
+			<!-- <div class="card__imgbox">
 				<img
 					src="./images/image-product-desktop.jpg"
-					alt="Gabrielle Essence Eau De Parfum by Chanel - Perfume bottle "
+					alt="Gabrielle Essence Eau De Parfum by Chanel - Perfume bottle"
 					class="card__imgbox-desktop"
 					loading="lazy"
 				/>
-
 				<img
 					src="./images/image-product-mobile.jpg"
-					alt="Gabrielle Essence Eau De Parfum by Chanel - Perfume bottle "
+					alt="Gabrielle Essence Eau De Parfum by Chanel - Perfume bottle"
 					class="card__imgbox-mobile"
 					loading="lazy"
 				/>
-			</div>
+			</div> -->
+			<!-- End of the first solution-->
 
 			<div class="card__content">
 				<h3 class="card__heading-secondary">Perfume</h3>
